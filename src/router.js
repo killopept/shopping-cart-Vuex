@@ -23,6 +23,10 @@ export default new Router({
       path: '/counter',
       name: 'counter',
       component: Counter
+    },{
+      path: '/cart',
+      name: 'cart',
+      component: () => import('./views/Shopping/Shopping.vue')
     }
   ]
 })
