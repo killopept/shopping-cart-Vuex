@@ -1,7 +1,7 @@
 <template>
   <div class = "demoVuex">
     <h1>vuex counter example</h1>
-    <div>Clicked: {{$store.state.count}} times, count is {{ evenOrOdd }},{{counted}}</div>
+    <div>Clicked: {{$store.state.moduleCouter.count}} times, count is {{ evenOrOdd }},{{counted}}</div>
     <br>
     <button @click = "increment">+</button>
     <button @click = "decrement">-</button>
@@ -19,7 +19,7 @@ export default {
       'evenOrOdd'
     ]),
     counted(){
-      var it = this.$store.state.test + new Date().getTime()
+      var it = this.$store.state.moduleCouter.test + new Date().getTime()
       return it
     }
   },
