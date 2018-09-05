@@ -30,6 +30,7 @@ const getters = {
 // actions
 const actions = {
   checkout ({ commit, state }, products) {
+    // window.console.log(products)
     const savedCartItems = [...state.items]
     commit('setCheckoutStatus', null)
     // empty cart
@@ -44,7 +45,6 @@ const actions = {
       }
     )
   },
-
   addProductToCart ({ state, commit }, product) {
     commit('setCheckoutStatus', null)
     if (product.inventory > 0) {

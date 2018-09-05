@@ -13,6 +13,7 @@ import products from './store/modulesProducts/products'
 Vue.use(Vuex)
 
 const moduleCouter = {
+  // namespaced: true,
   state,
   mutations,
   actions,

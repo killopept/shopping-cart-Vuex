@@ -1,5 +1,7 @@
 <template>
+  
   <ul>
+    <p>{{ localProduct }}</p>
     <li v-for="(product,index) in products" :key=index>
       {{ product.title }} - {{ product.price }}
       <br>
@@ -15,9 +17,20 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 export default {
-  computed: mapState({
-    products: state => state.products.all
-  }),
+  computed: {
+    ...mapState({
+      products: state => {
+        return state.products.all
+      },
+      localProduct: state => {
+        return state.products
+      }
+    }),
+    // localProduct() {
+    //   window.console.log(this.$store.state)
+    //   return this.$store.state.products
+    // }
+  },
   methods: mapActions('cart', [
     'addProductToCart'
   ]),

@@ -12,6 +12,24 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+// export default {
+//   name: 'Counter',
+//   computed: {
+//     ...mapGetters('moduleCouter',[ // 状态
+//       'evenOrOdd'
+//     ]),
+//     counted(){
+//       var it = this.$store.state.moduleCouter.test + new Date().getTime()
+//       return it
+//     }
+//   },
+//   methods: mapActions('moduleCouter',[ // 方法
+//     'increment',
+//     'decrement',
+//     'incrementIfOdd',
+//     'incrementAsync',
+//   ])
+// }
 export default {
   name: 'Counter',
   computed: {
